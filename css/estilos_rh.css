@@ -1,7 +1,7 @@
 /* Estilos para todo el proyecto */
 body {
     font-family: Arial, sans-serif;
-    background-color: #c7ced1;
+    background-color: #556080;
 }
 
 .contenedor-centrado {
@@ -42,7 +42,7 @@ table {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: #c7ced1;
     border: 1px solid lightslategray;
     border-radius: 5px;
 }

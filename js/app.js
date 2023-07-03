@@ -30,7 +30,6 @@ function alta (){
         var descripcion = document.getElementById('descripcion').value;
         var cantidad = document.getElementById('cantidad').value;
         var precio = document.getElementById('precio').value;
-       console.log(precio)
         // Creamos un objeto con los datos del producto
         var producto = {
             codigo: codigo,
@@ -55,11 +54,11 @@ function alta (){
                 } else {
                     // Si hubo un error, lanzar explícitamente una excepción
                     // para ser "catcheada" más adelante
-                    throw new Error('Error al agregar el producto.');
+                    throw new Error('Error al agregar el usuario.');
                 }
             })
             .then(function (data) {
-                alert('Producto agregado correctamente.');
+                alert('Usuario agregado correctamente.');
                 //Limpiamos el formulario.
                 document.getElementById('codigo').value = "";
                 document.getElementById('descripcion').value = "";
@@ -68,7 +67,7 @@ function alta (){
             })
             .catch(function (error) {
                 // Código para manejar errores
-                alert('Error al agregar el producto.');
+                alert('Error al agregar el usuario.');
             });
     })
 }
@@ -85,7 +84,7 @@ fetch(URL + 'productos')
         } else {
             // Si hubo un error, lanzar explícitamente una excepción
             // para ser "catcheada" más adelante
-            throw new Error('Error al obtener los productos.');
+            throw new Error('Error al obtener los usuarios.');
         }
     })
     .then(function (data) {
@@ -103,7 +102,7 @@ fetch(URL + 'productos')
     })
     .catch(function (error) {
         // Código para manejar errores
-        alert('Error al obtener los productos.');
+        alert('Error al obtener los usuarios.');
     })
 }
 
@@ -128,7 +127,7 @@ const app = Vue.createApp({
                     if (response.ok) {
                         return response.json()
                     } else {
-                        throw new Error('Error al obtener los datos del producto.')
+                        throw new Error('Error al obtener los datos del usuario.')
                     }
                 })
                 .then(data => {
@@ -138,7 +137,7 @@ const app = Vue.createApp({
                     this.mostrarDatosProducto = true
                 })
                 .catch(error => {
-                    alert('Error al obtener los datos del producto.')
+                    alert('Error al obtener los datos del usuario.')
                 })
         },
         guardarCambios() {
@@ -160,7 +159,7 @@ const app = Vue.createApp({
                     if (response.ok) {
                         return response.json()
                     } else {
-                        throw new Error('Error al guardar los cambios del producto.')
+                        throw new Error('Error al guardar los cambios del usuario.')
                     }
                 })
                 .then(data => {
@@ -168,7 +167,7 @@ const app = Vue.createApp({
                     location.reload()
                 })
                 .catch(error => {
-                    alert('Error al guardar los cambios del producto.')
+                    alert('Error al guardar los cambios del usuario.')
                 })
         }
     }
@@ -199,7 +198,7 @@ function baja (){
                             } else {
                                 // Si hubo un error, lanzar explícitamente una excepción
                                 // para ser "catcheada" más adelante
-                                throw new Error('Error al obtener los productos.');
+                                throw new Error('Error al obtener los usuarios.');
                             }
                         })
                         .then(data => {
@@ -208,7 +207,7 @@ function baja (){
                         })
                         .catch(error => {
                             console.log('Error:', error);
-                            alert('Error al obtener los productos.');
+                            alert('Error al obtener los usuarios.');
                         });
                 },
                 eliminarProducto(codigo) {
@@ -218,16 +217,18 @@ function baja (){
                             if (response.ok) {
                                 // Eliminar el producto de la lista después de eliminarlo en el servidor
                                 this.productos = this.productos.filter(producto => producto.codigo !== codigo);
-                                console.log('Producto eliminado correctamente.');
+                                //console.log('Usuario eliminado correctamente.');
+                                alert('Usuario eliminado correctamente.');
+
                             } else {
                                 // Si hubo un error, lanzar explícitamente una excepción
                                 // para ser "catcheada" más adelante
-                                throw new Error('Error al eliminar el producto.');
+                                throw new Error('Error al eliminar el usuario.');
                             }
                         })
                         .catch(error => {
                             // Código para manejar errores
-                            alert('Error al eliminar el producto.');
+                            alert('Error al eliminar el usuario.');
                         });
                 }
             },
@@ -237,7 +238,8 @@ function baja (){
             }
         });
 
-        app.mount('body');
+        // app.mount('body');
+        app.mount('#baja');
     }
 
 // ORIGINAL--------------------------------------------------------------------------------------------------

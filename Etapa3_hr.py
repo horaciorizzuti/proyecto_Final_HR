@@ -22,8 +22,8 @@ def create_table():
         CREATE TABLE IF NOT EXISTS productos (
             codigo INTEGER PRIMARY KEY,
             descripcion TEXT NOT NULL,
-            cantidad INTEGER NOT NULL,
-            precio REAL NOT NULL
+            cantidad TEXT NOT NULL,
+            precio INTERGER NOT NULL
         )
     ''')
     conn.commit()

@@ -1,13 +1,15 @@
 /* Estilos para todo el proyecto */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
+    background-color: #ECF0F1;
 }
 
 .contenedor-centrado {
     display:flex;
     width: 100%;
     justify-content: center;
+
 }
 
 p {
@@ -20,7 +22,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #007bff;
+    color: #3f578b;
 }
 
 .img {
@@ -33,18 +35,37 @@ form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: #9e9ea7;
     border: 1px solid lightslategray;
     border-radius: 5px;
 }
 
 table {
-    max-width: 90%;
+    /* max-width: 90%; */
+    width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    /* background-color: #556080; */
+    /* background-color: #9e9ea7; */
+    /* background-color: white; */
+    /* border: 1px solid lightslategray; */
+    border-radius: 5px;
+}
+
+#baja, #baja1{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* flex-wrap: wrap; */
+    /* min-width: 300px; */
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
     border: 1px solid lightslategray;
     border-radius: 5px;
+    background-color: #9e9ea7;
 }
 
 label {
@@ -72,17 +93,18 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color:#0056b3;
 }
 
 button {
-    padding: 8px;
+    padding: 10px;
     margin:4px;
-    background-color: #007bff;
+    background-color: #4077c8;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 100%;
 }
 
 button:hover {
@@ -90,17 +112,35 @@ button:hover {
 }
 
 a {
-    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-content: stretch ;
+    padding: 10px;
     margin:4px;
-    background-color: #fdab13;
+    background-color: #71C386;
     color: #ffffff;
-    border: none;
+    border: 5px grey;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 85%;
+    font-size: 100%;
+    min-width: 150px;
 }
 
 a:hover {
-    background-color: #cd7b00;
+    background-color: #42754F;
 }
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    /* height:0px; */
+    width:100%;
+    /* background-color:#9e9ea7; */
+    background-color: #3f578b;
+ }
+
+ footer, h4{
+    color:#ECF0F1 !important;
+ }
